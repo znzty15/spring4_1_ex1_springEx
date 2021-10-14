@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="bmical" class="com.javaGG.ex.BMICalculator">
+		<property name="lowWeight" value="18.5"></property>
+		<property name="normal" value="23"></property>
+		<property name="overWeight" value="25"></property>
+		<property name="obesity" value="30"></property>
+	</bean>
+	
+	<bean id="myInfo1" class="com.javaGG.ex.MyInfo">
+		<property name="name">
+			<value>홍길동</value>
+		</property>
+		<property name="weight">
+			<value>70</value>
+		</property>
+		<property name="height">
+			<value>170</value>
+		</property>
+		<property name="hobbies">
+			<list>
+			<value>게임</value>
+			<value>요리</value>
+			<value>운동</value>
+			</list>
+		</property>		
+		<property name="bmical">
+			<ref bean="bmical"></ref>
+		</property>
+	</bean>
+	
+	<bean id="myInfo2" class="com.javaGG.ex.MyInfo">
+		<property name="name">
+			<value>김유신</value>
+		</property>
+		<property name="weight">
+			<value>85</value>
+		</property>
+		<property name="height">
+			<value>177</value>
+		</property>
+		<property name="hobbies">
+			<list>
+			<value>칼싸움</value>
+			<value>말타기</value>
+			<value>전략짜기</value>
+			</list>
+		</property>		
+		<property name="bmical">
+			<ref bean="bmical"></ref>
+		</property>
+	</bean>
+
+</beans>

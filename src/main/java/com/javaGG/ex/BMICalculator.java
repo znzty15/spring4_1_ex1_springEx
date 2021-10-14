@@ -19,10 +19,27 @@ public class BMICalculator {
 		} else if(bmi_rs > overWeight) {
 			System.out.println("과체중 입니다.");
 		} else if(bmi_rs > normal) {
-			System.out.println("정상 입니다.");
+			System.out.println("정상체중 입니다.");
 		} else {
 			System.out.println("저체중 입니다.");
 		}
 	}
+
+	public void setNormal(double normal) {
+		this.normal = normal;
+	}
+
+	public void setLowWeight(double lowWeight) {
+		this.lowWeight = lowWeight;
+	}
+
+	public void setOverWeight(double overWeight) {
+		this.overWeight = overWeight;
+	}
+
+	public void setObesity(double obesity) {
+		this.obesity = obesity;
+	}
+	
 
 }
